@@ -62,7 +62,7 @@ public class ListelemeActivity extends AppCompatActivity implements View.OnClick
             case R.id.mailSiralaBtn: orderBy = "EMAIL" ; break;
         }
         cursor = db.query("KAYIT",null,null,null,null,null,orderBy);
-
+txt.clear();
         //okudukça sırakine hareket et
         while (cursor.moveToNext()){
             ad = cursor.getString(cursor.getColumnIndex("ISIM"));
